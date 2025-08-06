@@ -1,6 +1,6 @@
 # John the Ripper: The Basics 🛡️
 
-Welcome to my write-up for the **"Hash Cracking"** room on TryHackMe. This room introduces key cryptographic concepts and demonstrates how to crack hashes using one of the most powerful tools in cybersecurity: **John the Ripper**.
+Welcome to my write-up for the **"John the Ripper: The Basics"** room on TryHackMe. This room introduces key cryptographic concepts and demonstrates how to crack hashes using one of the most powerful tools in cybersecurity: **John the Ripper**.
 
 ---
 
@@ -114,6 +114,60 @@ john --format=nt --wordlist=/usr/share/wordlists/rockyou.txt ntlm.txt
 ##### from the screenshot we can see that the cracked value of this password is mushroom
 ![task4 output](images/pswd7.JPG)
 
+## ♟️ Task 6 : Cracking Hashes from /etc/shadow
+#### What is /etc/shadow?
+On Linux systems, password hashes are stored in /etc/shadow.
+Only root users can read this file because it contains sensitive data.
+If you gain access to this file, you can try cracking the hashes to reveal actual passwords.
 
+#### Why do we need /etc/passwd?
+John the Ripper needs both the /etc/passwd and /etc/shadow files to understand and crack the hashes.
+So, we combine them using a tool called: **unshadow** , This tool merges the data from both files into one file John can read.
 
+ Syntax: unshadow [path_to_passwd] [path_to_shadow]
+ Example: unshadow local_passwd local_shadow > unshadowed.txt
+ This creates a new file (unshadowed.txt) which John can then use to crack the password.
+
+ ```bash
+john --wordlist=/usr/share/wordlists/rockyou.txt --format=sha512crypt unshadowed.txt
+```
+#### What is the root password?
+ ##### from the screenshot we can see that the cracked value of this password is 1234
+![task4 output](images/pswd8.JPG)
+
+## Task 6 : Single Crack Mode
+
+#### What is Single Crack Mode?
+Single Crack Mode is a cracking technique in John the Ripper that generates password guesses based on the **username** and other account-related information (like the GECOS field). This mode is useful when passwords are derived from personal details, such as:
+
+- `markus`
+- `Markus123`
+- `MARKUS!`
+
+It uses **word mangling rules** to apply transformations to these base strings, creating many password variants.
+
+---
+
+#### How It Works
+
+John the Ripper:
+- Uses the **username** (and optionally, GECOS info like full name or office)
+- Applies **mangling rules** to create common variants
+- 
+On UNIX/Linux systems, John can extract extra personal information from the **GECOS field** in `/etc/passwd`. This may include:
+
+- Full name
+- Office number
+- Phone numbers
+
+John uses this information to intelligently guess passwords.
+
+ ```bash
+john --single --format=raw-md5 hash7.txt 
+```
+#### What is Joker’s password?
+ ##### from the screenshot we can see that the cracked value of this password is Jok3r
+![task4 output](images/pswd9.JPG)
+
+## ♟️ Task 8 : Custom rules
 
