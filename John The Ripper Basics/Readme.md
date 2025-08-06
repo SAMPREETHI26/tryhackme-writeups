@@ -69,9 +69,9 @@ As you can see from the output below, the hash type is identified as **MD5**:
 
 ```bash
 john --format=raw-md5 --wordlist=/usr/share/wordlists/rockyou.txt hash1.txt
+```
 As you can see from the command's output, the cracked password is:
-
-<span style="color:orange">biscuit</span>
+`biscuit`
 ![task4 output](images/passws.JPG)
 
 
