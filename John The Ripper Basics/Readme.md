@@ -133,7 +133,7 @@ john --wordlist=/usr/share/wordlists/rockyou.txt --format=sha512crypt unshadowed
 ```
 #### What is the root password?
  ##### from the screenshot we can see that the cracked value of this password is 1234
-![task4 output](images/pswd8.JPG)
+![task4 output](images/pswdroot.JPG)
 
 ## Task 6 : Single Crack Mode
 
@@ -153,7 +153,7 @@ It uses **word mangling rules** to apply transformations to these base strings, 
 John the Ripper:
 - Uses the **username** (and optionally, GECOS info like full name or office)
 - Applies **mangling rules** to create common variants
-- 
+  
 On UNIX/Linux systems, John can extract extra personal information from the **GECOS field** in `/etc/passwd`. This may include:
 
 - Full name
@@ -166,8 +166,9 @@ John uses this information to intelligently guess passwords.
 john --single --format=raw-md5 hash7.txt 
 ```
 #### What is Joker’s password?
+![task4 output](images/change1.JPG)
  ##### from the screenshot we can see that the cracked value of this password is Jok3r
-![task4 output](images/pswd9.JPG)
+![task4 output](images/pswd8.JPG)
 
 ## ♟️ Task 8 : Custom rules
 
