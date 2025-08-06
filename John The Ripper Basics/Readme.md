@@ -74,6 +74,29 @@ As you can see from the command's output, the cracked password is:
 `biscuit`
 ![task4 output](images/passws.JPG)
 
+#### In a similar way , find the hash types and crack the passwords for the other files as well.
+
+### 3. What type of hash is `hash2.txt`?
+ ![task4 output](images/hash2.JPG)
+
+### 4.What is the cracked value of `hash2.txt`?
+ ![task4 output](images/passws2.JPG)
+
+### 5. What type of hash is `hash3.txt`?
+ ![task4 output](images/hash3.JPG)
+   
+### 6.What is the cracked value of `hash3.txt`?
+ ![task4 output](images/passws3.JPG)
+
+### 7. What type of hash is `hash4.txt`?
+ ![task4 output](images/hash4.JPG)
+   
+### 8.What is the cracked value of `hash4.txt`?
+![task4 output](images/passws4.JPG)
+
+## ♟️ Task 5 : Cracking Windows Authentication Hashes
+
+
 
 
 
