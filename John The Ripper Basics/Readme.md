@@ -199,15 +199,43 @@ john secure.txt --wordlist=/usr/share/wordlists/rockyou.txt
 ```
 This process allows John to attempt password cracking on ZIP archives using dictionary attacks.
 #### What is the password for the secure.zip file?
-![task4 output](images/pswdzip.JPG)
+
+  ***pass123**
 
 #### What is the contents of the flag inside the zip file?
+
 ![task4 output](images/zipval.JPG)
 
 ## ♟️ Task 10 : Cracking Password-Protected RAR Archives
 
-![task4 output](images/pswdrar.JPG)
+similarly for .rar files we need to follow the same steps that we had mentioned for .zip files.
+
+ ```bash
+zip2john secure.rar > secure.txt
+
+```
+ ```bash
+john secure.txt --wordlist=/usr/share/wordlists/rockyou.txt
+```
+
+#### What is the password for the secure.rar file?
+  ***password***
+     
+#### What is the contents of the flag inside the rar file?
+   ***THM{r4r_4rch1ve5_th15_t1m3}***
 
 ## ♟️ Task 11 : Cracking SSH Keys with John
 
-![task4 output](images/pswdssh.JPG)
+convert the ssh keys into a text file using ssh2john utility and then crack the hash using john the ripper.
+ ```bash
+
+sudo apt-get install python
+sudo su
+sudo python /usr/share/john/ssh2john.py /home/mccleod1290/idrsa.id_rsa > id.txt
+john --wordlist=/usr/share/wordlists/rockyou.txt id.txt
+
+```
+
+#### What is the SSH private key password?
+  ***mango**
+
