@@ -10,6 +10,9 @@ Welcome to my write-up for the **"John the Ripper: The Basics"** room on TryHack
 - Why hashes are considered "one-way" functions
 - How password hashes can be cracked using dictionary attacks
 - How to use **John the Ripper** for hash cracking
+
+
+
 💡 Note: This write-up starts from Task 4, where the actual hands-on usage of the John the Ripper tool begins. Earlier tasks cover theory or setup steps, but Task 4 onwards dives into practical password cracking exercises.
 
 ---
