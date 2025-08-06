@@ -110,7 +110,7 @@ such as SYSTEM-level access on a Windows machine.
 ```bash
 john --format=nt --wordlist=/usr/share/wordlists/rockyou.txt ntlm.txt
 ```
-![task4 output](images/paswd7.JPG)
+![task4 output](images/pswd7.JPG)
      
 
 
