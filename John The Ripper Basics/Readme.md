@@ -135,7 +135,7 @@ john --wordlist=/usr/share/wordlists/rockyou.txt --format=sha512crypt unshadowed
  ##### from the screenshot we can see that the cracked value of this password is 1234
 ![task4 output](images/pswdroot.JPG)
 
-## Task 6 : Single Crack Mode
+## Task 7 : Single Crack Mode
 
 #### What is Single Crack Mode?
 Single Crack Mode is a cracking technique in John the Ripper that generates password guesses based on the **username** and other account-related information (like the GECOS field). This mode is useful when passwords are derived from personal details, such as:
@@ -171,4 +171,15 @@ john --single --format=raw-md5 hash7.txt
 ![task4 output](images/pswd8.JPG)
 
 ## ♟️ Task 8 : Custom rules
+
+Custom Rules in John the Ripper let you modify words from a wordlist by adding patterns like capital letters, numbers, or symbols to match real-life passwords.
+They are written in the john.conf file using actions like c (capitalize), A0 (prepend), and Az (append).
+
+#### What do custom rules allow us to exploit?
+     Password complexity predictability
+#### What rule would we use to add all capital letters to the end of the word?
+     Az"[A-Z]"
+     
+#### What flag would we use to call a custom rule called THMRules?
+     --rule=THMRules
 
