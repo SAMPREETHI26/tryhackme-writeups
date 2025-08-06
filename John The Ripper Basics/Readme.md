@@ -198,7 +198,11 @@ This creates a hash file (secure.txt) which can then be cracked using John with 
 john secure.txt --wordlist=/usr/share/wordlists/rockyou.txt
 ```
 This process allows John to attempt password cracking on ZIP archives using dictionary attacks.
+#### What is the password for the secure.zip file?
 ![task4 output](images/pswdzip.JPG)
+
+#### What is the contents of the flag inside the zip file?
+![task4 output](images/zipval.JPG)
 
 ## ♟️ Task 10 : Cracking Password-Protected RAR Archives
 
