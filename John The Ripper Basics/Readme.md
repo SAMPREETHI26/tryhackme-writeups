@@ -44,7 +44,7 @@ John the Ripper is a tool used to crack passwords by guessing them from a list o
 
 ## ♟️ Task 4 : Cracking Basic Hashes
 
-## 1. What type of hash is `hash1.txt`?
+### 1. What type of hash is `hash1.txt`?
 To identify the hash type 🔍:
 
 1. Navigate to the `task04` directory.
@@ -63,6 +63,16 @@ As you can see from the output below, the hash type is identified as **MD5**:
 
 ![task4 output](images/hash1.JPG)
 
+### 2.What is the cracked value of `hash1.txt`?
+
+1. Navigate to the directory where `hash1.txt` resides and run the following command:
+
+```bash
+john --format=raw-md5 --wordlist=/usr/share/wordlists/rockyou.txt hash1.txt
+As you can see from the command's output, the cracked password is:
+
+<span style="color:orange">biscuit</span>
+![task4 output](images/passws.JPG)
 
 
 
