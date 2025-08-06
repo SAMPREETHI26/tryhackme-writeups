@@ -186,3 +186,24 @@ They are written in the john.conf file using actions like c (capitalize), A0 (pr
 #### What flag would we use to call a custom rule called THMRules?
      --rule=THMRules
 
+## ♟️ Task 9 :Cracking Password Protected Zip Files
+zip2john is used to extract a hash from a ZIP file in a format that John the Ripper can understand.
+
+ ```bash
+zip2john secure.zip > secure.txt
+```
+This creates a hash file (secure.txt) which can then be cracked using John with a wordlist
+
+ ```bash
+john secure.txt --wordlist=/usr/share/wordlists/rockyou.txt
+```
+This process allows John to attempt password cracking on ZIP archives using dictionary attacks.
+![task4 output](images/pswdzip.JPG)
+
+## ♟️ Task 10 : Cracking Password-Protected RAR Archives
+
+![task4 output](images/pswdrar.JPG)
+
+## ♟️ Task 11 : Cracking SSH Keys with John
+
+![task4 output](images/pswdssh.JPG)
