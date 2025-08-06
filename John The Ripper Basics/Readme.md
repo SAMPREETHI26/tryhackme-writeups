@@ -111,7 +111,7 @@ such as SYSTEM-level access on a Windows machine.
 john --format=nt --wordlist=/usr/share/wordlists/rockyou.txt ntlm.txt
 ```
 
-#####from the screenshot we can see that the cracked value of this password is mushroom
+##### from the screenshot we can see that the cracked value of this password is mushroom
 ![task4 output](images/pswd7.JPG)
 
 
