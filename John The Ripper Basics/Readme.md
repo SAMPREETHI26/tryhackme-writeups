@@ -44,17 +44,24 @@ John the Ripper is a tool used to crack passwords by guessing them from a list o
 
 ## ♟️ Task 4 : Cracking Basic Hashes
 
-1 . what type of hash is hash1.txt?
-    To identify hash type 🔍
-    > Navigate to the task04 directory.
-    > use the command below to get the contents of the file
-      ```bash
-      cat hash1.txt 
-    > note down the hash value
-    > use the command python3 hash-id.py , provide the hash value that was previously noted , 
-      as you can see from below , we can say that the type of hash is md5
-      ![Alt Text](images/hash-output.png)
+## 1. What type of hash is `hash1.txt`?
+To identify the hash type 🔍:
 
+1. Navigate to the `task04` directory.
+2. Use the following command to display the contents of the file:
+    ```bash
+    cat hash1.txt
+    ```
+3. Note down the hash value displayed.
+4. Run the following command to identify the hash type:
+    ```bash
+    python3 hash-id.py
+    ```
+5. Provide the noted hash value when prompted.
+
+As you can see from the output below, the hash type is identified as **MD5**:
+
+![task4 output](images/hash1.JPG)
 
 
 
