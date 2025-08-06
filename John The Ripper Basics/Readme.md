@@ -96,7 +96,21 @@ As you can see from the command's output, the cracked password is:
 
 ## ♟️ Task 5 : Cracking Windows Authentication Hashes
 
+Authentication hashes are the hashed versions of passwords stored by operating systems
 
+NTLM (NTHash) is the modern hash format used by Windows OS to store user and service passwords.
+These hashes are typically stored in the SAM (Security Account Manager) database or NTDS.dit (Active Directory).
+Tools can be used to dump the SAM and extract NTLM hashes.
+NTLM hashes are vulnerable to brute-force attacks when passwords are weak. Obtaining them typically requires privileged access, 
+such as SYSTEM-level access on a Windows machine.
 
+#### What do we need to set the --format flag to in order to crack this hash?
+      nt 
+#### What is the cracked value of this password?
+```bash
+john --format=nt --wordlist=/usr/share/wordlists/rockyou.txt ntlm.txt
+```
+![task4 output](images/paswd7.JPG)
+     
 
 
